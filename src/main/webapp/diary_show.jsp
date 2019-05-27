@@ -75,6 +75,11 @@
             window.parent.location.href = "<%=request.getContextPath()%>/diary?action=delete&diaryId="+diaryId;
         }
     }
+	$(window.parent.document).find("#pageIframe").load(function(){ 
+		var pageIframe = $(window.parent.document).find("#pageIframe"); 
+		var thisheight = $(document).height()+30; 
+		pageIframe.height(thisheight); 
+	});
 </script>
 </body>
 </html>

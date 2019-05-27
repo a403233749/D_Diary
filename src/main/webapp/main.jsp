@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-9">
-                <iframe id="pageIframe" src="diary_list.jsp" frameborder="0" width="100%" height="1000px"></iframe>
+                <iframe id="pageIframe" src="diary_list.jsp" frameborder="0" width="100%" height="300px" scrolling="no"></iframe>
             </div><!--/.col-xs-12.col-sm-9-->
 
             <div class="col-sm-3">
@@ -125,6 +125,10 @@
             var pageAction = '${pageAction}';
             changePageIframe(pageName,pageAction);
         });
+		$("#pageIframe").load(function(){ 
+			var pageIframeHeight = $(this).contents().find("body").height()+30; 
+			$(this).height(pageIframeHeight); 
+		}); 
 
         function navChange(pageName) {
             $("#main").removeClass("active");
@@ -144,7 +148,6 @@
                 $("#pageIframe").attr("src","diary_list.jsp");
             }
         }
-
     </script>
 </body>
 </html>

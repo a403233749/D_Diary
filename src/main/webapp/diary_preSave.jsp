@@ -92,7 +92,12 @@
 <script src="./assets/js/ckeditor/config.js"></script>
 <script type="text/javascript">
     $(function () {
-       CKEDITOR.replace('diaryContent')
+       CKEDITOR.replace('diaryContent');
+    });
+    $(window.parent.document).find("#pageIframe").load(function(){
+        var pageIframe = $(window.parent.document).find("#pageIframe");
+        var thisheight = $(document).height()+330;
+        pageIframe.height(thisheight);
     });
 </script>
 </body>

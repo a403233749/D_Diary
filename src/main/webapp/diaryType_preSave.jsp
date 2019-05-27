@@ -71,5 +71,12 @@
 <script src="./assets/js/vendor/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="./dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(window.parent.document).find("#pageIframe").load(function(){
+        var pageIframe = $(window.parent.document).find("#pageIframe");
+        var thisheight = $(document).height()+30;
+        pageIframe.height(thisheight);
+    });
+</script>
 </body>
 </html>

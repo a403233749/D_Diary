@@ -63,7 +63,7 @@ public class CKEditorFileUploadServlet extends HttpServlet {
                         if(file != null){
                             out.println("<script type=\"text/javascript\">");
                             out.println("window.parent.CKEDITOR.tools.callFunction(" + callback
-                                    + ",'" + request.getContextPath() + "/" + pu.readProperty("imageFile") + sb.toString() + "','')");
+                                    + ",'" + request.getContextPath() + "/" + pu.readProperty("imageFile") + file.getName() + "','')");
                             out.println("</script>");
                         }
                     }
